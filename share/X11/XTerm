@@ -1,0 +1,29 @@
+*toolBar: false
+*waitForMap: true
+
+*VT100*bellIsUrgent: true
+*VT100*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+*VT100*cursorUnderline: false
+*VT100*cutNewline: false
+*VT100*internalBorder: 2
+*VT100*locale: true
+*VT100*logInhibit: true
+*VT100*metaSendsEscape: true
+*VT100*on2Clicks: regex [^ \n]+
+*VT100*on3Clicks: regex (ftp|http|https|mailto|news|nntp|telnet|file|aim):[A-Za-z0-9/](([A-Za-z0-9$_.+!*(),;/?:@&~=-])|%[A-Fa-f0-9]{2})+(#([a-zA-Z0-9][a-zA-Z0-9$_.+!*(),;/?:@&~=%-]*))?
+*VT100*on4Clicks: line
+*VT100*on5Clicks: all
+*VT100*pointerShape: xterm
+*VT100*quietGrab: true
+*VT100*selectToClipboard: true
+*VT100*showMissingGlyphs: true
+*VT100*translations: #override \
+     Ctrl Shift<Key>o: print-everything() \n\
+     <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0) \n\
+     Ctrl Shift<Key>c: copy-selection(CLIPBOARD) \n\
+     Ctrl Shift<Key>v: insert-selection(CLIPBOARD)
+*VT100*trimSelection: true
+*VT100*utf8: true
+*VT100*utf8Title: true
+
+! vim: set ft=xdefaults :

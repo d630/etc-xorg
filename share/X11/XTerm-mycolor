@@ -1,0 +1,29 @@
+#include "XTerm"
+
+*termName: xterm-256color
+
+*VT100*colorMode: true
+*VT100*boldColors: true
+*VT100*dynamicColors: true
+
+*VT100*italicULMode: false
+*VT100*showBlinkAsBold: true
+*VT100*underLine: false
+*VT100*veryBoldColors: 527
+
+*VT100*allowBoldFonts: false
+*VT100*alwaysBoldMode: false
+
+*VT100*colorAttrMode: false
+*VT100*colorBDMode: true
+*VT100*colorBLMode: false
+*VT100*colorITMode: true
+*VT100*colorRVMode: false
+*VT100*colorULMode: true
+
+*VT100*alwaysHighlight: false
+*VT100*highlightColorMode: true
+*VT100*highlightReverse: false
+*VT100*highlightSelection: true
+
+! vim: set ft=xdefaults :

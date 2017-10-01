@@ -1,0 +1,15 @@
+#!/bin/sh
+
+exec /usr/bin/X \
+    :0 \
+    -deferglyphs 16 \
+    -depth 24 \
+    -keeptty \
+    -logfile /dev/stderr \
+    -nolisten tcp \
+    -novtswitch \
+    -render color \
+    vt${XDG_VTNR:?} \
+    "$@";
+
+#  vim: set ts=4 sw=4 tw=0 et :
