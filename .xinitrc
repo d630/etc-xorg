@@ -23,4 +23,4 @@
 
 exec "$X_XCLIENT";
 
-# vim: set ts=4 sw=4 tw=0 et :
+# vim: set ft=sh :
