@@ -2,7 +2,7 @@
 ! -----------------------------------------------------------------
 
 #ifdef COLOR
-#include "/home/user1/share/xcolors/current.xcolor"
+#include "./share/xcolors/current.xcolor"
 #endif
 
 #ifdef COLOR
@@ -40,10 +40,10 @@
 ! font
 ! -----------------------------------------------------------------
 
-/* *faceName: xft:Monospace */
-/* *faceSize: 9.0 */
-*font: -xos4-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-*
-/* *renderFont: true */
+*faceName: xft:Monospace
+*faceSize: 9.0
+/* *font: -xos4-terminus-medium-r-normal-*-16-*-*-*-*-*-iso10646-* */
+*renderFont: true
 
 ! xft
 ! -----------------------------------------------------------------
