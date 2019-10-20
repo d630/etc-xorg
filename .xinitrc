@@ -4,9 +4,9 @@
 #
 # local xinitrc file, used by all X sessions started by xinit (startx)
 
-. "$HOME/".profile.d/base.sh;
-. "$HOME/".profile.d/ext.sh;
-. "$HOME/".profile.d/run.sh;
+. "$HOME/.profile.d/base.sh";
+. "$HOME/.profile.d/ext.sh";
+. "$HOME/.profile.d/run.sh";
 
 \ProfileRcExtSxhkd;
 
