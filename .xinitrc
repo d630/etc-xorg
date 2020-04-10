@@ -7,6 +7,7 @@
 . "$HOME/.profile.d/ext.sh";
 . "$HOME/.profile.d/run.sh";
 
+audio=;
 eval "$(monitor)";
 audio-device "$audio";
 # X_PDF_VIEWER_OPTS=-r$X_DPI;
@@ -58,7 +59,7 @@ xorg-autolock;
 daemonize clipbuffer -rc;
 
 ln -vsrf \
-	"${XDG_CONFIG_HOME:?}/sxhkd/us-altgr-intl/sxhkdrc_${X_XCLIENT:?}" \
+	"${XDG_CONFIG_HOME:?}/sxhkd/us-altgr-intl/sxhkdrc_$X_XCLIENT" \
 	"$XDG_CONFIG_HOME/sxhkd/sxhkdrc";
 sxhkd-restart;
 
