@@ -35,8 +35,8 @@ xprop -root \
 xsetroot -name "$X_XCLIENT";
 xsetroot -cursor_name left_ptr;
 
-xset -dpms;
 xset s 3600 60;
+xset dpms 0 0 0 -dpms;
 xset b off;
 
 keyboard;
