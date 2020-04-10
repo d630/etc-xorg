@@ -35,7 +35,7 @@ xsetroot -name "$X_XCLIENT";
 xsetroot -cursor_name left_ptr;
 
 xset -dpms;
-xset s off;
+xset s 3600 60;
 xset b off;
 
 keyboard;
@@ -54,7 +54,7 @@ autocutsel -fork -selection PRIMARY -buttonup;
 redshift -l "${X_MY_LATITUDE1:?}:${X_MY_LONGITUDE1:?}" &
 unclutter -keystroke -idle 1 -root -noevents &
 
-daemonize xorg-autolock;
+xorg-autolock;
 daemonize clipbuffer -rc;
 
 ln -vsrf \
