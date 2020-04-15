@@ -8,8 +8,8 @@
 . "$HOME/.profile.d/run.sh";
 
 audio=;
-eval "$(monitor)";
-audio-device "$audio";
+eval "$(reconfigure-monitor)";
+reconfigure-audio "$audio";
 # X_PDF_VIEWER_OPTS=-r$X_DPI;
 
 xrdb -merge "$HOME/.Xresources";
@@ -35,9 +35,9 @@ xprop -root \
 xsetroot -name "$X_XCLIENT";
 xsetroot -cursor_name left_ptr;
 
-keyboard;
-pointer;
-camera;
+reconfigure-keyboard;
+reconfigure-pointer;
+reconfigure-camera;
 
 \ProfileRcExtGlib;
 \ProfileRcExtGtk;
@@ -45,7 +45,7 @@ camera;
 daylight;
 
 touch "${XDG_RUNTIME_DIR:?}/.dunst_use_critical$DISPLAY";
-dunst-restart;
+restart-dunst;
 
 autocutsel -fork -selection PRIMARY -buttonup;
 redshift -l "${X_MY_LATITUDE1:?}:${X_MY_LONGITUDE1:?}" &
@@ -57,7 +57,7 @@ daemonize clipbuffer -rc;
 ln -vsrf \
 	"${XDG_CONFIG_HOME:?}/sxhkd/us-altgr-intl/sxhkdrc_$X_XCLIENT" \
 	"$XDG_CONFIG_HOME/sxhkd/sxhkdrc";
-sxhkd-restart;
+restart-sxhkd;
 
 \ProfileRcExtDbus;
 
