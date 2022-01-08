@@ -18,8 +18,10 @@ xhost +local:;
 
 case $X_XCLIENT in
 	(bspwm)
+		XDG_CURRENT_DESKTOP=bspwm
+		GDMSESSION=bspwm
 		_JAVA_AWT_WM_NONREPARENTING=1;
-		export _JAVA_AWT_WM_NONREPARENTING;;
+		export _JAVA_AWT_WM_NONREPARENTING XDG_CURRENT_DESKTOP GDMSESSION;;
 	(cwm)
 		X_XCLIENT=openbsd-cwm;;
 	(openbsd-cwm|spectrwm)
@@ -49,7 +51,7 @@ restart-dunst;
 
 autocutsel -fork -selection PRIMARY -buttonup;
 redshift -l "${X_MY_LATITUDE1:?}:${X_MY_LONGITUDE1:?}" &
-unclutter -keystroke -idle 1 -root -noevents &
+unclutter -keystroke -idle 3 -root -noevents &
 
 xorg-autolock;
 daemonize clipbuffer -rc;
