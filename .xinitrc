@@ -8,7 +8,7 @@
 . "$HOME/.profile.d/run.sh"
 
 audio=
-eval "$(exec -- reconfigure-monitor)"
+eval "$(exec reconfigure-monitor)"
 command -- reconfigure-audio "$audio"
 # X_PDF_VIEWER_OPTS=-r$X_DPI;
 
@@ -67,6 +67,6 @@ command -- restart-sxhkd
 
 \ProfileRcExtDbus
 
-exec -- "$X_XCLIENT"
+exec "$X_XCLIENT"
 
 # vim: set ft=sh :
